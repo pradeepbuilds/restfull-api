@@ -107,6 +107,12 @@ app.delete('/posts/:id', (req, res) => {
 });
 
 
+//home page
+app.get('/', (req, res) => {
+    res.redirect('/posts');
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
