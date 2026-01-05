@@ -1,0 +1,18 @@
+{
+  "name": "quora-posts-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pradeep Sanap",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "uuid": "^13.0.0"
+  }
+}

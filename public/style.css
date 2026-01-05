@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f6f7f9;
+    padding: 40px 15px;
+    color: #222;
+}
+
+/* Page Heading */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #b92b27; /* Quora red */
+}
+
+/* Post Card */
+.post {
+    max-width: 720px;
+    margin: 0 auto 25px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.post:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Username */
+.user {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Post content */
+.content {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Decorative line */
+.post::after {
+    content: "";
+    display: block;
+    margin-top: 18px;
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, #b92b27, #ff6b6b);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .post {
+        padding: 20px;
+    }
+
+    .content {
+        font-size: 15px;
+    }
+}
+/* New Post Form */
+.post-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.post-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+    outline: none;
+    border-color: #b92b27;
+    box-shadow: 0 0 0 3px rgba(185, 43, 39, 0.15);
+}
+
+.post-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.post-form button {
+    width: 100%;
+    padding: 14px;
+    background: #b92b27;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.post-form button:hover {
+    background: #9e2320;
+    transform: translateY(-2px);
+}
+/* Add New Post Button */
+.new-post {
+    display: inline-block;
+    margin-bottom: 35px;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, #b92b27, #ff5f5f);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(185, 43, 39, 0.35);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.new-post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(185, 43, 39, 0.45);
+    background: linear-gradient(135deg, #9e2320, #ff3b3b);
+}
+
+/* Active (click) effect */
+.new-post:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(185, 43, 39, 0.4);
+}
+
+/* Center helper (optional wrapper) */
+.button-center {
+    text-align: center;
+}
+
+/* Make Read more smaller inside post */
+.post .new-post {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(185, 43, 39, 0.25);
+}

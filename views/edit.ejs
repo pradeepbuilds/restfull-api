@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>Edit Post</h1>
+
+    <div class="post">
+
+        <!-- Post ID shown using existing style -->
+        <h2 class="user">Post ID: <%= post.id %></h2>
+
+        <form action="/posts/<%= post.id %>?_method=Patch" method="POST">
+
+            <!-- Username (readonly to keep identity same) -->
+            <label class="user">Username</label>
+            <input 
+                type="text" 
+                name="username" 
+                value="<%= post.username %>" 
+                readonly
+                class="content"
+                style="width:100%; margin-bottom:12px;"
+            >
+
+            <!-- Content -->
+            <label class="user">Content</label>
+            <textarea 
+                name="content" 
+                class="content"
+                style="width:100%; min-height:120px;"
+                required
+            ><%= post.content %></textarea>
+
+            <br><br>
+
+            <!-- Action buttons -->
+            <a href="/posts/<%= post.id %>" class="new-post">Cancel</a>
+            <button type="submit" class="new-post">Update Post</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
