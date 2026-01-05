@@ -15,7 +15,7 @@
         <p class="content"><%= post.content %></p>
 
         <!-- Update -->
-        <a href="http://localhost:3000/posts/<%= post.id %>/edit" 
+        <a href="/posts/<%= post.id %>/edit" 
            class="new-post" 
            style="margin-top:12px; display:inline-block;">
             Update
@@ -43,7 +43,7 @@
     <% } %>
 
     <br>
-    <a class="new-post" href="http://localhost:3000/posts/new">Add New Post</a>
+    <a class="new-post" href="/posts/new">Add New Post</a>
 
 </body>
 </html>
